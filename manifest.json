@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "What Font",
+  "description": "Check what font is being used on any given website",
+  "version": "0.0.1",
+  "action": {
+    "default_title": "What Font Chrome Plugin",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background/service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content-scripts/content_script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
